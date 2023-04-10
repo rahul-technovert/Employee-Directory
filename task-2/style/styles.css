@@ -1,0 +1,411 @@
+/* 
+
+Filter-heading font : 1.1 rem && weight : 600
+Emp name font same as filter heading font
+Emp info font : .7rem
+
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #919090;
+  --primary-color-dark: #504f4f;
+  --secondary-color: #5dc8fd;
+  --secondary-color-dark: #00b1fc;
+  --tertiary-color: #69ba00;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.6rem;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+p {
+  margin: 0.3rem 0 0 0;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/* hidden */
+
+.hidden {
+  display: none;
+}
+
+@media screen and (min-width: 500px) {
+  .hidden {
+    display: block;
+  }
+}
+
+/* employee directory */
+
+.employee-directory {
+  padding: 2rem;
+}
+
+.employee-directory .container {
+  max-width: 1130px;
+  margin: 0 auto;
+}
+
+/* header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px #eee solid;
+}
+
+.logo-img-block {
+  width: 150px;
+  height: 50px;
+}
+
+.logo-block {
+  display: flex;
+  gap: 2rem;
+}
+
+.company-name-block h1 {
+  font-weight: 300;
+  color: var(--secondary-color);
+}
+
+.company-name-block p {
+  font-size: 1.3rem;
+  color: var(--primary-color-dark);
+}
+
+.greeting {
+  color: var(--secondary-color);
+}
+
+.greeting,
+.user-block .name {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.user-block .name {
+  color: var(--primary-color-dark);
+}
+
+.user-block img {
+  width: 40px;
+  height: 40px;
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    display: grid;
+    justify-content: center;
+  }
+
+  .company-name-block h1 {
+    font-size: 2rem;
+  }
+
+  .user-block {
+    justify-self: center;
+  }
+}
+
+/* section main */
+
+.section-main {
+  padding-top: 20px;
+  gap: 4rem;
+}
+
+@media screen and (min-width: 500px) {
+  .section-main {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+  }
+}
+
+/* filter */
+
+.filter-items {
+  margin: 0;
+  margin-bottom: 2rem;
+  padding: 0;
+  list-style: none;
+}
+
+.filter-items li {
+  margin-bottom: 0.6rem;
+}
+.filter-items li:hover {
+  cursor: pointer;
+}
+
+.filter-list-block .heading {
+  font-weight: 500;
+  color: var(--primary-color-dark);
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.job-title-list li:last-child {
+  color: var(--secondary-color-dark);
+  font-size: 0.9rem;
+}
+.job-title-list li:last-child:hover {
+  cursor: pointer;
+}
+
+/* all employee-block */
+
+.all-employees-block {
+  border: 1px #bbb solid;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(75.6px, 75.6px));
+  gap: 2rem 1rem;
+  height: 400px;
+
+  overflow: scroll;
+}
+
+@media screen and (max-height: 600px) {
+  .all-employees-block {
+    height: 220px;
+  }
+}
+
+.all-employees-block::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+.all-employees-block::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  outline: 1px solid slategrey;
+}
+/* employee */
+
+.employee {
+  display: flex;
+  gap: 4px;
+  color: var(--primary-color);
+  background-color: #e9e8e8;
+  padding: 0.7rem;
+}
+
+.emp-img-block {
+  width: 60px;
+  height: 60px;
+}
+
+.emp-img-block img {
+  object-fit: cover;
+}
+
+.emp-name {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--primary-color-dark);
+}
+
+.emp-role,
+.emp-dept {
+  font-size: 1rem;
+}
+
+.emp-info-list li {
+  margin-bottom: 3px;
+}
+.employee ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.employee-icons-list {
+  display: flex;
+  gap: 5px;
+}
+
+.employee .icon {
+  font-size: 0.8rem;
+}
+
+/* search-and-alphabet-block */
+
+.search-and-alphabet-block .note {
+  margin-bottom: 5px;
+  color: var(--primary-color-dark);
+}
+
+/* search-block */
+
+.search-and-form-container {
+  display: grid;
+  justify-content: center;
+  gap: 10px;
+}
+
+@media screen and (min-width: 500px) {
+  .search-and-form-container {
+    display: flex;
+    gap: 4rem;
+  }
+}
+
+.search-block {
+  display: grid;
+  justify-content: center;
+  gap: 1rem;
+  margin: 20px;
+}
+
+@media screen and (min-width: 500px) {
+  .search-block {
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.search-block .input-and-clear {
+  display: flex;
+  align-items: center;
+}
+
+.search-tag {
+  margin-right: 10px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--primary-color-dark);
+}
+
+.search-input-block {
+  border: 1px #bbb solid;
+  padding: 5px 10px;
+}
+
+.search-block input {
+  border: none;
+  font-size: 1rem;
+}
+.search-input-block,
+.search-block input::placeholder {
+  color: #bbb;
+}
+.search-block input:focus {
+  outline: none;
+}
+
+.clear-btn {
+  background-color: var(--tertiary-color);
+  margin-left: 20px;
+  border: none;
+  padding: 5px 15px;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.filter-by-from-and-add-employee-btn .hidden {
+  display: block;
+}
+
+.filter-by-from-and-add-employee-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 500px) {
+  .filter-by-from-and-add-employee-btn .hidden {
+    display: none;
+  }
+}
+
+/* filter by form */
+
+.filter-by-form label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-right: 3px;
+  color: var(--primary-color-dark);
+}
+
+.filter-by-form select {
+  border: 1px #bbb solid;
+  padding: 5px 10px;
+  color: var(--primary-color-dark);
+  outline: none;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 500px) {
+  .filter-by-form {
+    justify-self: center;
+  }
+}
+
+/* Add emp button */
+
+.add-employee-btn {
+  background-color: var(--secondary-color-dark);
+  color: #fff;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* alphabet block */
+
+.alphabets-block {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(27px, 1fr));
+  gap: 3px;
+}
+
+.alphabet {
+  background-color: var(--secondary-color-dark);
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 6px 10px;
+  border: none;
+}
+
+.alphabet img {
+  width: 20px;
+  height: 20px;
+}
+
+/* view-more */
+
+.view-more {
+  color: var(--secondary-color-dark);
+}
